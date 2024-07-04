@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <!-- <div class="navbar_bg"></div> -->
+        <div class="navbar_items">
+          <div class="navbar_content">
+            <div id="navbarLogo"><a style="text-decoration: none; color: rgb(65, 64, 64); font-weight: bolder;" href="/main.html">Home</a></div>
+            <div class="location_time">
+              <div id="navbarLocation">Special Region of Washington, District California</div>
+              <div class="country_timezone">
+                <div id="country">Country: ID</div>
+                <div id="timezone">Timezone: ID/WIB</div>
+              </div> 
+            </div>
+          </div>
+          <div class="search">
+            <form action="" id="searchForm">
+              <input id="search" type="text" />
+              <button id="submitSearch" type="submit">
+                <img src="./assets/search-location.png" alt="">
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""> -->
+      <div id="loading">
+      </div>
+      <div class="error_page">
+        <div id="errorDesc">
+          ERROR BRO
+        </div>
+      </div>
+      <div class="container">
+        <div class="sidebar">
+          <div class="daily_summaries"> 
+            <div class="daily_card">
+              <div id="dailyDate">
+                Sun 20 February
+              </div>
+              <div id="dailyIcon">
+                <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="">
+              </div>
+              <div id="dailyTemp">
+                <div class="temp_indicator"><div style="background-color: yellow;" class="sun"></div>24.55 , C</div>
+                <div class="temp_indicator"><div style="background-color: rgb(255, 255, 177); box-shadow: 0 0 5px white;" class="sun"></div>24.55 , C</div>
+                <div class="temp_indicator"><div style="border: 3px solid black;" class="sun"></div>24.55 , C</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="card">
+            <div class="card_contents">
+              <div class="content_layout">
+                <div class="row row_top">
+                  <div class="hightlights_section">
+                    <div class="overview_heading">
+                      <div class="hightlight_text">
+                        <!-- flag field -->
+                        <p id="date">Time</p>
+                        <p id="title">Title,</p>
+                        <p id="desc">litle Desc</p>
+                      </div>
+                      <div class="container_icon">
+                        <!-- flag field -->
+                        <img
+                          id="weather_icon"
+                          src=""
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <!-- flag field -->
+                     <!-- The current weather is overcast with a temperature of 16°C and a feels-like temperature of 16°C. The wind speed is 4 meter/sec with gusts up to 6 meter/sec coming from the west-southwest direction. The air pressure is at 1007 hPa with a humidity level of 79%. The dew point is at 12°C and the visibility is 10000 meters. The UV index is at 4, indicating moderate risk from the sun's UV rays. The sky is covered with overcast clouds, and there is no precipitation expected at the moment. Overall, it is a moderately cool and cloudy day with light to moderate winds from the west-southwest. -->
+                    <textarea id="weather_desc" readonly draggable="false">
+                    </textarea>
+                  </div>
+                  <div class="metric_section">
+                    <div class="submetric_layout">
+                      <div id="temp" class="row temperature">
+                        <!-- flag field -->
+                        36.99 , C
+                      </div>
+                      <div class="sub_metric">
+                        <div class="submetric_list">
+                          <img src="./assets/clouds.png" alt="">
+                          <label id="clouds" for="">55 %</label>
+                        </div>
+                        <div class="submetric_list">
+                          <img src="./assets/uv-index.png" alt="">
+                          <label id="uvi" for="">uvi</label>
+                        </div>
+                        <div class="submetric_list">
+                          <img src="./assets/termomether.png" alt="">
+                          <label id="feelsLike" for="">22,1 , C</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="metric_items">
+                      <div class="metric_details">
+                        <!-- flag field -->
+                        <div class="metric_desc">
+                          <img src="./assets/wind speed.png" alt="">
+                          <label id="windSpeed"  for="">20 km/h</label>
+                        </div>
+                        <div class="metric_desc">
+                          <img src="./assets/wind speed.png" alt="">
+                          <label id="windGust"  for=""></label>
+                        </div>
+                        <div class="metric_desc">
+                          <img src="./assets/wind-direction.png" alt="">
+                          <label id="windDirection"  for="">South </label>
+                        </div>
+                      </div>  
+                      <!-- flag field -->
+                      <div  class="metric_hum">
+                        <img src="./assets/humidity.png" alt="">
+                        <label id="humidity"  for="">
+                          77
+                        </label>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="row row_bottom">
+                  <div class="hourly_forecast">
+                    <div class="hourly_label">
+                      Hourly Forecast
+                    </div>
+                    <div class="hourly_summaries">
+                      <!-- flag from here -->
+                      <!-- <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div>
+                      <div class="hourly_detail">
+                        <div id="hourlyClock">
+                          Fri 12:00 pm
+                        </div>
+                        <div id="hourlyIcon">
+                          <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div id="hourlyTemp">
+                          35
+                        </div>
+                      </div> -->
+                       
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <script src="./route.js"></script>
+      <script src="./main.js"></script>
+    </div>
+  </body>
+</html>
