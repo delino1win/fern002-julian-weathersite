@@ -14,7 +14,7 @@ let timeZoneDisplay = document.querySelector("#timezone")
 async function fetchLocation (location) {
 
   try {
-    const res = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`)
+    const res = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${API_KEY}`)
     
     if(!res.ok) {
       // alert("fail to fetch location")
