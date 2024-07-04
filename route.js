@@ -21,7 +21,7 @@ async function fetchLocation (location) {
       console.error(res.status)
     }
 
-    console.log("res is ok")
+    // console.log("res is ok")
 
     const locationData = await res.json()
     // console.log("locationData : ", locationData[0].name, locationData[0].state)

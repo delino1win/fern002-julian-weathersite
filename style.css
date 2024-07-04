@@ -99,8 +99,11 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,231,196,1) 0%, rg
   display: flex;
   flex-direction: column;
   align-items: start;
+  letter-spacing: 0.5px;
+  color: whitesmoke;
+  text-shadow: 1px solid gray;
   /* background-color: #9bad9b; */
-  box-shadow: 0 0 5px whitesmoke;
+  /* box-shadow: 0 0 5px whitesmoke; */
   padding: 5px;
   border-radius: 7px;
   font-weight: bold;
@@ -113,6 +116,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,231,196,1) 0%, rg
   width: 320px;
   font-size: large;
   min-height: 36px;
+  font-size: 16px;
   border-radius: 5px;
   border: none;
   padding-left: 7px;
@@ -131,11 +135,18 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,231,196,1) 0%, rg
   /* width: 36px;
   height: 36px; */
   /* display: flex; */
+  
 }
 
 #submitSearch > img {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
+  transition: all 0.5s;
+}
+
+#submitSearch > img:hover {
+  width: 32px;
+  height: 32px;
 }
 
 .navbar_content {
@@ -368,6 +379,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,231,196,1) 0%, rg
 
 #weather_desc {
   color: #4c624c;
+  line-height: 1.6;
   background-color: transparent;
   /* overflow: hidden; */
   font-size: 16px;
