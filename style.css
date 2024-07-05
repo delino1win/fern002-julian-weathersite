@@ -193,7 +193,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,231,196,1) 0%, rg
 .daily_card {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 300px;
   /* margin: 12px 0px 12px 0px; */
@@ -211,10 +211,10 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,231,196,1) 0%, rg
 }
 
 #dailyDate {
-  min-width: 50%;
+  min-width: 25%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   /* border: 1px solid black; */
 }
 

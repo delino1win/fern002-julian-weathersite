@@ -219,10 +219,8 @@ async function dailyForecast(dailyData, timezone) {
     let timeConverter = convertDailyUnix(obj.dt, timezone);
     return `
       <div class="daily_card">
-        <div class="daily_details">
-          <div id="dailyDate">
-            ${timeConverter}
-          </div>
+        <div id="dailyDate">
+          ${timeConverter}
         </div>
         <div id="dailyIcon">
           <img src="https://openweathermap.org/img/wn/${obj.weather[0].icon}@2x.png" alt="">
