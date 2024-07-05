@@ -15,7 +15,7 @@ function main () {
   country.innerHTML = `Country Code: <i>${defaultData.country}</i>`
   timeZoneDisplay.innerHTML = `Timezone: <i>${defaultData.timezone}</i>`
 
-  // mainController(defaultData)
+  mainController(defaultData)
 
   const searchForm = document.querySelector("#searchForm")
   searchForm.addEventListener("submit", async (event) => {
